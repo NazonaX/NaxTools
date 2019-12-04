@@ -129,6 +129,7 @@ public class SMTPClient {
         in.close();
         socket.close();
         debugger.writeLine("Mail send successfully...");
+        return true;
       } catch (Exception e) {
         debugger.writeLine(e.getMessage());
         e.printStackTrace();
@@ -178,10 +179,8 @@ public class SMTPClient {
 
   private void clear() {
     setSubject("");
-    setAuthPswd("");
     setData("");
     setReceiver("");
-    setSender("");
   }
 
 }
